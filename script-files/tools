@@ -1,0 +1,28 @@
+#preload all aliases
+#set -a to automatically export all functions
+set -a
+
+purge_haplotigs() { singularity exec ${SINGULARITYdir}purge_haplotigs.simg purge_haplotigs "$@" ; }
+
+#basicTools
+parallel() { singularity exec ${SINGULARITYdir}basicTools.simg parallel "$@" ; }
+mawk() { singularity exec ${SINGULARITYdir}basicTools.simg mawk "$@" ; }
+seqkit() { singularity exec ${SINGULARITYdir}basicTools.simg seqkit "$@" ; }
+samtools() { singularity exec ${SINGULARITYdir}basicTools.simg samtools "$@" ; }
+bedtools() { singularity exec ${SINGULARITYdir}basicTools.simg bedtools "$@" ; }
+faToTwoBit() { singularity exec  ${SINGULARITYdir}basicTools.simg faToTwoBit "$@"; }
+twoBitInfo() { singularity exec  ${SINGULARITYdir}basicTools.simg twoBitInfo "$@"; }
+rmsk2bed() { singularity exec  ${SINGULARITYdir}basicTools.simg rmsk2bed "$@"; }
+bedops() { singularity exec  ${SINGULARITYdir}basicTools.simg bedops "$@"; }
+rmsk2bed() { singularity exec  ${SINGULARITYdir}basicTools.simg rmsk2bed "$@"; }
+
+#minimap2
+minimap2() { singularity exec ${SINGULARITYdir}minimap2.simg minimap2 "$@" ; }
+
+
+minimap2() { singularity exec ${SINGULARITYdir}minimap2.simg minimap2 "$@" ; }
+
+#RepeatMasker container
+RepeatMasker() { singularity exec ${SINGULARITYdir}repeatmasker.simg RepeatMasker "$@"; }
+
+set +a
